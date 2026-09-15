@@ -1,0 +1,23 @@
+# Secrets
+.env
+*.env
+*.key
+*.pem
+id_rsa
+id_ed25519
+id_ecdsa
+
+# Backups
+*.tar
+*.tar.gz
+*.tgz
+backups/
+
+# Logs
+*.log
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

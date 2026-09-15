@@ -1,13 +1,7 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/bash
 
-# Portfolio skeleton: replace placeholders with the actual servers/paths from your lab.
-# Intended flow:
-# 1. check remote disk space
-# 2. create remote archive
-# 3. copy archive to Jump Host
-# 4. push archive to Backup Server
-# 5. retain three days
-# 6. log each execution
+DATE=$(date +"%Y-%m-%d")
 
-echo "Configure this script with the actual lab inventory before use."
+tar -czf /tmp/etc-$DATE.tar.gz /etc
+
+sudo -u hichem scp /tmp/etc-$DATE.tar.gz hichem@192.168.1.50:/home/hichem/backups/
